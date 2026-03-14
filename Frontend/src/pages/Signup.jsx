@@ -103,7 +103,7 @@ function Signup() {
           Already have an account?{" "}
           <Link
             to="/"
-            className="text-indigo-600 font-semibold hover:underline"
+            className=" text-white font-semibold hover:underline"
           >
             Login
           </Link>

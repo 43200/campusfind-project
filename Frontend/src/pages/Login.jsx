@@ -104,7 +104,7 @@ function Login() {
           Don't have an account?{" "}
           <Link
             to="/signup"
-            className="text-indigo-600 font-semibold hover:underline"
+            className="  text-white font-semibold hover:underline"
           >
             Signup
           </Link>
