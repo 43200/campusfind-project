@@ -18,7 +18,7 @@ function CollegeDetails() {
       try {
 
         const res = await axios.get(
-          `http://localhost:5000/api/institutions/${id}`
+          `https://campusfind-backend-tj4j.onrender.com/api/institutions/${id}`
         );
 
         setCollege(res.data);
@@ -54,7 +54,7 @@ function CollegeDetails() {
       console.log("COLLEGE ID:", college?._id);
 
       const res = await axios.post(
-        "http://localhost:5000/api/users/save-college",
+        "https://campusfind-backend-tj4j.onrender.com/api/users/save-college",
         {
           userId: user._id,
           collegeId: college._id

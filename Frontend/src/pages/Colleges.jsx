@@ -27,7 +27,7 @@ function Colleges() {
       queryType = type.toUpperCase();
     }
 
-    let url = `http://localhost:5000/api/institutions?type=${queryType}`;
+    let url = `https://campusfind-backend-tj4j.onrender.com/api/institutions?type=${queryType}`;
     if (filters.domain) url += `&domain=${filters.domain}`;
     if (filters.minRating) url += `&minRating=${filters.minRating}`;
     if (filters.maxFees) url += `&maxFees=${filters.maxFees}`;

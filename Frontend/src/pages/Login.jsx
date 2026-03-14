@@ -28,7 +28,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://campusfind-backend-tj4j.onrender.com/api/auth/login",
         form
       );
 

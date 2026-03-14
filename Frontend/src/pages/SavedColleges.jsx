@@ -13,7 +13,7 @@ function SavedColleges() {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/users/profile/${user._id}`
+        `https://campusfind-backend-tj4j.onrender.com/api/users/profile/${user._id}`
       );
 
       setColleges(res.data.savedColleges);
@@ -36,7 +36,7 @@ function SavedColleges() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/users/remove-college",
+        "https://campusfind-backend-tj4j.onrender.com/api/users/remove-college",
         {
           userId: user._id,
           collegeId

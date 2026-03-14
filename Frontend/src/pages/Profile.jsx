@@ -17,7 +17,7 @@ function Profile() {
       try {
 
         const res = await axios.get(
-          `http://localhost:5000/api/users/profile/${storedUser._id}`
+          `https://campusfind-backend-tj4j.onrender.com/api/users/profile/${storedUser._id}`
         );
 
         setUser(res.data);
@@ -40,7 +40,7 @@ function Profile() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/users/update-name",
+        "https://campusfind-backend-tj4j.onrender.com/api/users/update-name",
         {
           userId: storedUser._id,
           name
