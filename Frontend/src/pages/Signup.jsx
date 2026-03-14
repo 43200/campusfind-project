@@ -99,7 +99,7 @@ function Signup() {
           Signup
         </button>
 
-        <p className="mt-5 text-center text-sm sm:text-base text-gray-600">
+        <p className="mt-5 text-center text-sm sm:text-base text-white">
           Already have an account?{" "}
           <Link
             to="/"
