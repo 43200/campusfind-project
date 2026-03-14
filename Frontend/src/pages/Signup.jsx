@@ -56,23 +56,24 @@ function Signup() {
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Card */}
-      <div className="relative bg-white shadow-2xl rounded-xl p-6 sm:p-10 w-full max-w-md">
+      {/* Card */}
+      <div className="relative bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-xl p-6 sm:p-10 w-full max-w-md">
 
-        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-white">
           Create Account
         </h1>
 
         <input
           name="name"
           placeholder="Full Name"
-          className="w-full border border-gray-300 p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full border border-white/40 bg-white/20 text-white placeholder-white p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           onChange={handleChange}
         />
 
         <input
           name="email"
           placeholder="Email"
-          className="w-full border border-gray-300 p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full border border-white/40 bg-white/20 text-white placeholder-white p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           onChange={handleChange}
         />
 
@@ -80,7 +81,7 @@ function Signup() {
           name="password"
           type="password"
           placeholder="Password"
-          className="w-full border border-gray-300 p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="w-full border border-white/40 bg-white/20 text-white placeholder-white p-3 mb-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
           onChange={handleChange}
         />
 
