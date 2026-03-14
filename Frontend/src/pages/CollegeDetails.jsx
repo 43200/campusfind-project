@@ -9,6 +9,8 @@ function CollegeDetails() {
   const [college, setCollege] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [rating, setRating] = useState(0);
+  const [reviewText, setReviewText] = useState("");
 
   // FETCH COLLEGE
   useEffect(() => {
@@ -71,7 +73,25 @@ function CollegeDetails() {
       setSaving(false);
     }
   };
+  const submitReview = async () => {
 
+    try {
+
+      await axios.post("https://campusfind-backend-tj4j.onrender.com/api/reviews/add-review", {
+        collegeId: college._id,
+        userId: user._id,
+        userName: user.name,
+        rating,
+        reviewText
+      });
+
+      alert("Review added!");
+
+    } catch (error) {
+      console.log(error);
+    }
+
+  };
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center text-white">
@@ -208,7 +228,25 @@ function CollegeDetails() {
             >
               {saving ? "Saving..." : "Save College"}
             </button>
+            <h3>Rate this College</h3>
 
+            <select onChange={(e) => setRating(e.target.value)}>
+              <option value="">Select Rating</option>
+              <option value="1">1 ⭐</option>
+              <option value="2">2 ⭐</option>
+              <option value="3">3 ⭐</option>
+              <option value="4">4 ⭐</option>
+              <option value="5">5 ⭐</option>
+            </select>
+
+            <textarea
+              placeholder="Write your review..."
+              onChange={(e) => setReviewText(e.target.value)}
+            />
+
+            <button onClick={submitReview}>
+              Submit Review
+            </button>
           </div>
 
         </div>

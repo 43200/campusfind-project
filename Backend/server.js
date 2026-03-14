@@ -9,7 +9,9 @@ const app = express();
 const authRoutes = require("./routes/auth");
 const institutionRoutes = require("./routes/institutionsRoute");
 const userRoutes = require("./routes/userRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
 
+app.use("/api/reviews", reviewRoutes);
 /* MIDDLEWARE */
 app.use(cors());
 app.use(express.json());
